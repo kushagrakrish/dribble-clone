@@ -11,7 +11,7 @@ const route = async () => {
     <>
       <Modal>
         <h1 className='modal-head-text'>Create Project</h1>
-        <ProjectForm project={} type='create' session={session} />
+        <ProjectForm project={"sad"} type='create' session={session} />
       </Modal>
     </>
   );
