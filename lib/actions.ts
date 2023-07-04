@@ -39,7 +39,7 @@ export const createUser = (name: string, email: string, avatarUrl: string) => {
       avatarUrl: avatarUrl,
     },
   };
-  return makeGraphQLRequest(createUserMutation, { variables });
+  return makeGraphQLRequest(createUserMutation, variables); // Pass the variables directly instead of wrapping them in an extra object
 };
 
 // Check actions from github
