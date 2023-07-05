@@ -2,6 +2,7 @@ import { ProjectForm } from "@/common.type";
 import {
   createProjectMutation,
   createUserMutation,
+  getProjectByIdQuery,
   getUserQuery,
   projectsQuery,
 } from "@/graphql";
@@ -101,4 +102,9 @@ export const fetchAllProject = async (
     category,
     endcursor,
   });
+};
+
+export const getProjectDetails = (id: string) => {
+  client.setHeader("x-api-key", apiKey);
+  return makeGraphQLRequest(getProjectByIdQuery, { id });
 };
